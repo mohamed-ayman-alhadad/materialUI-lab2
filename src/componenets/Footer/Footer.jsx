@@ -8,9 +8,27 @@ import twitter from '../../../images/twitter.png'
 import insta from '../../../images/insta.png'
 import linkedIn from '../../../images/linkedIn.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Box, Container, Typography } from '@mui/material'
+import Button from '@mui/material/Button';
 function Footer() {
-  return (
+  return (<>
+  <Container maxWidth="xl" sx={{backgroundColor:"#fafafa", padding:"20px 30px"}}>
+    <Typography variant="h4" sx={{padding:"10px 0px"}}>BECOME AN EQ3 INSIDER</Typography>
+    <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      margin: "0",
+      padding: "10px 0",
+      width: "700px"
+      
+    }}
+    >
+      <Typography variant="h6">Get the latest news and offers when you become an EQ3 insider</Typography>
+      <Button variant="contained" sx={{backgroundColor:"black" , padding:"10px 20px"}} >Sign up</Button>
+    </Box>
+  </Container>
     <div className={`${styles.footer} bg-black text-white`}>
       <div className={`${styles.footerContainer} d-flex container gap-5 justify-content-between`}>
         <div className='d-flex flex-column'>
@@ -58,6 +76,7 @@ function Footer() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
